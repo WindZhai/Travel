@@ -2,7 +2,7 @@
   <div>
       <div class="header">
       <div class="header-left">返回</div>
-      <div class="header-input">输入城市/游玩景点</div>
+      <div class="header-input">输入城市/游玩景点/美食</div>
       <div class="header-right">城市</div>
       </div>
   </div>

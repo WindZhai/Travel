@@ -18,7 +18,7 @@ export default{
   name: 'HomeIcons',
   data () {
     return {
-      iconList: [{
+      iconList: [ {
         id: '0001',
         imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
         desc: '景点门票'
@@ -30,23 +30,23 @@ export default{
         id: '0003',
         imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png',
         desc: '大连圣亚'
-      },{
+      }, {
         id: '0004',
         imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/b71c1387a921ccf9c6edc7e8def3da90.png',
         desc: '大连森林动物园'
-      },{
+      }, {
         id: '0005',
         imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png',
         desc: '踏青赏花'
-      },{
+      }, {
         id: '0007',
         imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png',
         desc: '自然风光'
-      },{
+      }, {
         id: '0008',
         imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/3a0879f224e0aca97843bff78cabac3a.png',
         desc: '大连必游'
-      },{
+      }, {
         id: '0009',
         imgUrl: 'https://imgs.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
         desc: '一日游'
@@ -56,7 +56,7 @@ export default{
   computed: {
     pages () {
       const pages = []
-      this.iconList.forEach((item,index) =>{
+      this.iconList.forEach((item, index) =>{ 
         const page = Math.floor(index/8)
           if(!pages[page]){
             pages[page] =[]
@@ -75,6 +75,8 @@ export default{
   .icons >>> .swiper-container
    height 0
    padding-bottom 50%
+  .icons
+   margin-top .1rem
   .icon
    height 0
    overflow hidden

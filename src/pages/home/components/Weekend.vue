@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">周末去哪儿</div>
     <ul>
-    	<li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+    	<li class="item border-bottom" v-for="item of list" :key="item.id">
         <div class="item-img-wrapper">
         <img class="item-img" :src="item.imgUrl">
         </div>
@@ -18,30 +18,8 @@
 <script>
   export default{
     name: 'HomeWeekend',
-    data () {
-      return {
-        recommendList: [ {
-          id: '0001',
-          imgUrl: 'https://imgs.qunarzz.com/sight/source/1812/b4/e9d7f043c4fadf.jpg_r_640x214_713df0cf.jpg',
-          title: '大连森林动物园',
-          desc: '与可爱温顺的羊驼亲密接触'
-        }, {
-          id: '0002',
-          imgUrl: 'https://imgs.qunarzz.com/sight/source/1812/b4/e9d7f043c4fadf.jpg_r_640x214_713df0cf.jpg',
-          title: '大连森林动物园',
-          desc: '与可爱温顺的羊驼亲密接触'
-        }, {
-          id: '0003',
-          imgUrl: 'https://imgs.qunarzz.com/sight/source/1812/b4/e9d7f043c4fadf.jpg_r_640x214_713df0cf.jpg',
-          title: '大连森林动物园',
-          desc: '与可爱温顺的羊驼亲密接触'
-        }, {
-          id: '0004',
-          imgUrl: 'https://imgs.qunarzz.com/sight/source/1812/b4/e9d7f043c4fadf.jpg_r_640x214_713df0cf.jpg',
-          title: '大连森林动物园',
-          desc: '与可爱温顺的羊驼亲密接触'
-        }]
-      }
+    props: {
+      list:Array
     }
   }
 </script>
@@ -52,11 +30,10 @@
    line-height .8rem
    background #eee
    text-indent .2rem
-   margin-top .2rem
    .item-img-wrapper
     overflow hidden
     height 0
-    padding-bottom 33.9%
+    padding-bottom 37.09%
   .item-img
    width 100%
   .item-info

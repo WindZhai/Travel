@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">猜你喜欢</div>
     <ul>
-    	<li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+    	<li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
           <p class="item-title">{{ item.title }}</p>
@@ -17,30 +17,8 @@
 <script>
   export default{
     name: 'HomeRecommend',
-    data () {
-      return {
-        recommendList: [ {
-          id: '0001',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/1910/80/805d5dc05ab054c2a3.img.jpg_200x200_e5d89794.jpg',
-          title: '大连森林动物园',
-          desc: '与可爱温顺的羊驼亲密接触'
-        }, {
-          id: '0002',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/1910/80/805d5dc05ab054c2a3.img.jpg_200x200_e5d89794.jpg',
-          title: '大连森林动物园',
-          desc: '与可爱温顺的羊驼亲密接触'
-        }, {
-          id: '0003',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/1910/80/805d5dc05ab054c2a3.img.jpg_200x200_e5d89794.jpg',
-          title: '大连森林动物园',
-          desc: '与可爱温顺的羊驼亲密接触'
-        }, {
-          id: '0004',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/1910/80/805d5dc05ab054c2a3.img.jpg_200x200_e5d89794.jpg',
-          title: '大连森林动物园',
-          desc: '与可爱温顺的羊驼亲密接触'
-        }]
-      }
+    props:{
+      list:Array
     }
   }
 </script>

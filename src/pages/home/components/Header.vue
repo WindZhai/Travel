@@ -6,7 +6,7 @@
       </div>
       <div class="header-input"><span class="iconfont">&#xe632;</span>输入城市/游玩景点/美食</div>
       <router-link to="/city">
-        <div class="header-right">{{this.city}}<span class="iconfont arrow-icon">&#xe64a;</span></div>
+        <div class="header-right">{{this.$store.state.city}}<span class="iconfont arrow-icon">&#xe64a;</span></div>
       </router-link>
       </div>
   </div>
@@ -14,10 +14,7 @@
 
 <script>
 export default{
-  name: 'HomeHeaders',
-  props: {
-    city: String
-  }
+  name: 'HomeHeaders'
 }
 </script>
 

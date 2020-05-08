@@ -5,7 +5,7 @@
     </div>
     <div class="search-content" ref="search" v-show="keyword">
       <ul>
-        <li class="search-item border-bottom" v-for="item of list" :key="item.id">{{item.name}}</li>
+        <li class="search-item border-bottom" v-for="item of list" :key="item.id" @click="handleCityClick(item.name)">{{item.name}}</li>
         <!-- 让下面这句话在有搜索结果时不显示，使用v-show -->
         <li class="search-item border-bottom" v-show="hadNoData">没有找到匹配数据</li>
       </ul>
@@ -53,6 +53,13 @@
           }
           this.list = result
         },100)
+      }
+    },
+    methods: {
+      handleCityClick (city) {
+        this.$store.commit('changeCity', city)
+        // 跳转到首页
+        this.$router.push('/')
       }
     },
     // 添加滚动效果

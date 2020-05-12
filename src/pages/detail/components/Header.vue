@@ -62,6 +62,8 @@
     color #fff
     font-size .4rem
   .header-fixed
+  //设置z-index来挡住列表
+   z-index 2
    position fixed
    top 0
    left 0
